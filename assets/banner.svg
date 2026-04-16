@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640" role="img" aria-label="Anichin API - Official Documentation - Dracin API">
+  <title>Anichin API — Official Documentation (Dracin API)</title>
+  <desc>Banner resmi repository Anichin API: Unified REST and WebSocket API untuk 15 sumber short drama. Anichin Official, Dracin API.</desc>
+
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="0%" r="80%">
+      <stop offset="0%" stop-color="#e63946" stop-opacity="0.18"/>
+      <stop offset="60%" stop-color="#0b0b11" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#e63946"/>
+      <stop offset="100%" stop-color="#ff5e6a"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1280" height="640" fill="#07070c"/>
+  <rect width="1280" height="640" fill="url(#bg)"/>
+
+  <g transform="translate(80, 80)">
+    <rect x="0" y="0" width="120" height="22" rx="2" fill="none" stroke="#e63946" stroke-width="1"/>
+    <text x="60" y="15" text-anchor="middle" fill="#e63946"
+          font-family="ui-monospace, 'Geist Mono', monospace" font-size="10" letter-spacing="2.4">
+      ANICHIN OFFICIAL
+    </text>
+  </g>
+
+  <g transform="translate(80, 160)">
+    <text fill="#ffffff" font-family="Georgia, 'Times New Roman', serif" font-size="120" font-weight="400" letter-spacing="-3">
+      Anichin <tspan fill="url(#accent)" font-style="italic" filter="url(#glow)">API</tspan>.
+    </text>
+    <text y="80" fill="#9a9aa5" font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="22" font-weight="400">
+      Dracin API · 15 sumber short drama · REST + WebSocket
+    </text>
+    <text y="115" fill="#5a5a65" font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="16">
+      DramaBox · ReelShort · ShortMax · NetShort · DramaWave · FlickReels · DramaNova · +9 lainnya
+    </text>
+  </g>
+
+  <g transform="translate(80, 460)">
+    <rect width="280" height="44" rx="4" fill="#11111a" stroke="#1a1a24"/>
+    <text x="16" y="18" fill="#5a5a65" font-family="ui-monospace, 'Geist Mono', monospace" font-size="9" letter-spacing="1.6">
+      TRIAL TOKEN
+    </text>
+    <text x="16" y="34" fill="#ffb547" font-family="ui-monospace, 'Geist Mono', monospace" font-size="13">
+      TRIAL-ANICHIN-2026
+    </text>
+
+    <g transform="translate(304, 0)">
+      <rect width="200" height="44" rx="4" fill="#11111a" stroke="#1a1a24"/>
+      <text x="16" y="18" fill="#5a5a65" font-family="ui-monospace, 'Geist Mono', monospace" font-size="9" letter-spacing="1.6">
+        RATE LIMIT
+      </text>
+      <text x="16" y="34" fill="#7f9973" font-family="ui-monospace, 'Geist Mono', monospace" font-size="13">
+        50 req / min
+      </text>
+    </g>
+
+    <g transform="translate(528, 0)">
+      <rect width="220" height="44" rx="4" fill="#11111a" stroke="#1a1a24"/>
+      <text x="16" y="18" fill="#5a5a65" font-family="ui-monospace, 'Geist Mono', monospace" font-size="9" letter-spacing="1.6">
+        BASE URL
+      </text>
+      <text x="16" y="34" fill="#e8e8ed" font-family="ui-monospace, 'Geist Mono', monospace" font-size="13">
+        api.anichin.bio
+      </text>
+    </g>
+  </g>
+
+  <g transform="translate(80, 560)" fill="#5a5a65" font-family="ui-monospace, 'Geist Mono', monospace" font-size="11">
+    <text>GET /{source}/trending  ·  /search  ·  /detail  ·  /episode  ·  /hotrank  ·  /recommended</text>
+  </g>
+
+  <g transform="translate(1040, 60)" fill="none" stroke="#e63946" stroke-width="1" opacity="0.6">
+    <circle cx="80" cy="80" r="60"/>
+    <circle cx="80" cy="80" r="40" stroke-dasharray="2 4"/>
+    <circle cx="80" cy="80" r="20"/>
+    <circle cx="80" cy="80" r="3" fill="#e63946"/>
+  </g>
+</svg>

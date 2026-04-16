@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Anichin API WebSocket Example — Dracin API</title>
+<meta name="description" content="Contoh penggunaan WebSocket Anichin API (Dracin API) di browser. Anichin Official.">
+</head>
+<body>
+<h1>Anichin API — WebSocket Demo</h1>
+<pre id="log" style="background:#0b0b11;color:#e8e8ed;padding:16px;font-family:ui-monospace;min-height:200px"></pre>
+
+<script>
+const log = (msg) => document.getElementById("log").textContent += msg + "\n";
+
+const ws = new WebSocket("wss://api.anichin.bio/ws");
+
+ws.onopen = () => {
+  log("[Anichin WS] Connected");
+  ws.send(JSON.stringify({ type: "auth", token: "TRIAL-ANICHIN-2026" }));
+};
+
+ws.onmessage = (e) => {
+  const msg = JSON.parse(e.data);
+
+  if (msg.type === "auth") {
+    log("[Anichin WS] Auth OK");
+    ws.send(JSON.stringify({
+      id: "req_1",
+      action: "execute",
+      source: "dramabox",
+      path: "trending",
+      params: {}
+    }));
+    return;
+  }
+
+  if (msg.type === "ratelimit") {
+    log(`[Anichin RateLimit] ${msg.remaining}/${msg.limit} (reset ${msg.reset}s)`);
+    return;
+  }
+
+  if (msg.id === "req_1") {
+    log(`[Anichin Trending] ${msg.data.items.length} drama, status=${msg.status} (${msg.ms}ms)`);
+    log(`#1 → ${msg.data.items[0].title}`);
+  }
+};
+
+ws.onerror = (e) => log("[Anichin WS] Error: " + e.message);
+ws.onclose  = () => log("[Anichin WS] Disconnected");
+</script>
+</body>
+</html>
